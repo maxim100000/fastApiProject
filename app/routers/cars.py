@@ -17,7 +17,7 @@ async def login(token: Annotated[str, Depends(get_token)]):
     return {'access_token': token, 'token_type': 'bearer'}
 
 
-@router.get("/", response_model=list[CarsWithUsers], dependencies=[Depends(pass_token)])
+@router.get("/", response_model=list[CarsWithUsers])
 async def get_all(session: Annotated[Session, Depends(get_session)],
                   offset: int = 0, limit: int = 100, sort: str = 'id'):
     return get_cars(session, offset=offset, limit=limit, sort=sort) 
