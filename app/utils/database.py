@@ -3,7 +3,7 @@ from sqlmodel import create_engine
 
 # settings = Settings()
 
-engine = create_engine('sqlite:///utils/database.db')
+engine = create_engine('sqlite:////opt/render/project/src/app/utils/database.db')
 
 
 
