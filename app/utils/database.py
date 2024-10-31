@@ -3,7 +3,7 @@ from .settings import Settings
 
 settings = Settings()
 
-engine = create_engine(settings.url)
+engine = create_engine('sqlite:///database.db')
 
 
 
